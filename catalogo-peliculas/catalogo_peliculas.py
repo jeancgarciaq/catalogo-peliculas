@@ -1,14 +1,14 @@
-from tkinter import *
-from tkinter import ttk
-from client.gui_app import Frame
+import tkinter as tk
+from client.gui_app import Frame, barra_menu 
 
 def main():
-    root = Tk()
+    root = tk.Tk()
     root.title('Catálogo de Películas')
-    # Modificar el icono root.iconbitmap('img/nombredelarchivo')
-    # Impedir que se modifique el tamaño de la ventana root.resizable(0,0) equivale a false, false
-    
-app = Frame(root = root)
+    root.iconbitmap('img/favicon.ico')
+    # resizable se usa para evitar que se amplie la ventana root.resizable(0,0) 0 = False, 1 = True
+    barra_menu(root)
+    app = Frame(root=root)
+    app.mainloop()
 
 if __name__ == '__main__':
     main()
